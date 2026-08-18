@@ -1,0 +1,31 @@
+# spring.application.name=Ecommerce
+# spring.h2.console.enabled=true
+# spring.datasource.url=jdbc:h2:mem:test
+
+spring:
+  application:
+    name: Ecommerce
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+management:
+  endpoints:
+    web:
+      exposure:
+        include: beans, health, health-path
+  endpoint:
+    health:
+      show-details: always
+  info:
+    env:
+      enabled: true
+info:
+  app:
+    name: MyApp
+    description: App built by us
+    version: 1.0.1
