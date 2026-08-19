@@ -1,0 +1,11 @@
+# https://kubernetes.io/docs/concepts/configuration/configmap/
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+data:
+  DB_HOST: my-postgres-svc.default
+  DB_USER: root
+  DB_PASS: password
+  DB_NAME: ecommerce
+  DB_PORT: "5432"
