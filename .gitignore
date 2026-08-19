@@ -6,7 +6,10 @@ target/
 
 *.zip
 *.jar
-kubernetes/*
+kubernetes
+kubernetes/
+kubernetes/**
+/kubernetes
 
 ### STS ###
 .apt_generated
